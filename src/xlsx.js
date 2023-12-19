@@ -24259,6 +24259,7 @@ function sheet_add_json(_ws, js, opts) {
 			}
 		});
 	});
+	alert(hdr.join(' , '));
 	range.e.c = Math.max(range.e.c, _C + hdr.length - 1);
 	var __R = encode_row(_R);
 	if(offset) for(C = 0; C < hdr.length; ++C) ws[encode_col(C + _C) + __R] = {t:'s', v:hdr[C]};
