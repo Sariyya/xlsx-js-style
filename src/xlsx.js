@@ -24231,7 +24231,7 @@ function sheet_add_json(_ws, js, opts) {
 	var hdr = o.header || [], C = 0;
 
 	js.forEach(function (JS, R) {
-		keys(JS).forEach(function(k) {
+		hdr.forEach(function(k) {
 			var v = JS[k];
 			var t = 'z';
 			var z = "";
