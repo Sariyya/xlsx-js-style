@@ -24232,7 +24232,6 @@ function sheet_add_json(_ws, js, opts) {
 
 	js.forEach(function (JS, R) {
 		keys(JS).forEach(function(k) {
-			if((C=hdr.indexOf(k)) == -1) hdr[C=hdr.length] = k;
 			var v = JS[k];
 			var t = 'z';
 			var z = "";
