@@ -24231,7 +24231,10 @@ function sheet_add_json(_ws, js, opts) {
 	var hdr = o.header || [], C = 0;
 
 	js.forEach(function (JS, R) {
+		console.log("JS ", JS)
+
 		hdr.forEach(function(k) {
+			console.log("k ", k)
 			var v = JS[k];
 			var t = 'z';
 			var z = "";
@@ -24257,10 +24260,12 @@ function sheet_add_json(_ws, js, opts) {
 				}
 				if(z) cell.z = z;
 			}
+			console.log("CELL ", cell)
 		});
 	});
-	alert(hdr.join(' , '));
 	range.e.c = Math.max(range.e.c, _C + hdr.length - 1);
+	console.log("RANGE ", range)
+
 	var __R = encode_row(_R);
 	if(offset) for(C = 0; C < hdr.length; ++C) ws[encode_col(C + _C) + __R] = {t:'s', v:hdr[C]};
 	ws['!ref'] = encode_range(range);
