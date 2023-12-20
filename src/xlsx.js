@@ -24267,7 +24267,7 @@ function sheet_add_json(_ws, js, opts) {
 	console.log("RANGE ", range)
 	console.log({_R, _C, C,})
 	var __R = encode_row(_R);
-	console.log("ENCODED ", R)
+	console.log("ENCODED ", __R)
 	if(offset) for(C = 0; C < hdr.length; ++C) ws[encode_col(C + _C) + __R] = {t:'s', v:hdr[C]};
 	ws['!ref'] = encode_range(range);
 	console.log(ws)
